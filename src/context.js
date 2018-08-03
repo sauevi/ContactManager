@@ -22,10 +22,24 @@ const reducer = (state, action) => {
           contact => contact.id !== action.payload
         )
       };
+    //metodo para agregar un nuevo contacto, se llama el payload y se le agrega un contacto del state
     case 'ADD_CONTACT':
       return {
         ...state,
         contacts: [action.payload, ...state.contacts]
+      };
+    //metodo para actualizar un contacto, con un mapa se recorre todo el objeto, se valida si el id es
+    //igual al id del payload, de ser asi el contacto pasa a ser el del payload, de lo contrario se pone
+    //el mismo contacto.
+    case 'UPDATE_CONTACT':
+      return {
+        ...state,
+        contacts: state.contacts.map(
+          contact =>
+            contact.id === action.payload.id
+              ? (contact = action.payload)
+              : contact
+        )
       };
     default:
       return state;
