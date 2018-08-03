@@ -24,7 +24,7 @@ class EditContacts extends Component {
     const { id } = this.props.match.params;
     //hacemos el get al usuar del id
     const res = await axios.get(
-      `http://jsonplaceholder.typicode.com/users/${id}`
+      `https://jsonplaceholder.typicode.com/users/${id}`
     );
     //guardamos la data en una constante
     const contact = res.data;
@@ -83,7 +83,7 @@ class EditContacts extends Component {
 
     //hacemos el update al valor del id
     const res = await axios.put(
-      `http://jsonplaceholder.typicode.com/users/${id}`,
+      `https://jsonplaceholder.typicode.com/users/${id}`,
       updateContact
     );
     //llamamos el metodo dispatch y hacemos un update

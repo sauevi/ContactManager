@@ -52,7 +52,7 @@ export class Provider extends Component {
   // se hace de forma asyncrona.
   async componentDidMount() {
     //ya que el metodo es "async" se le debe poner el await para que la data se guarde en la variable
-    const res = await axios.get('http://jsonplaceholder.typicode.com/users');
+    const res = await axios.get('https://jsonplaceholder.typicode.com/users');
 
     this.setState({ contacts: res.data });
   }
