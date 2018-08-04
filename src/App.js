@@ -11,7 +11,6 @@ import NotFound from './components/pages/NotFound';
 import Test from './components/test/Test';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 /**
  * Root de nuestra App, el "Provider" se utiliza para proveer las variables globales a todo el sistema,
  * para poder navegar en la pagina se debe instalar el componente "react-router-dom", este se debe importar como esta en el ejemplo

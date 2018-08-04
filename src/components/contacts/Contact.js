@@ -35,7 +35,29 @@ class Contact extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <div className="card card-body mb-3">
+            <div className="card card-body mb-3 container-fluid">
+              <div className="mr-all">
+                <i
+                  data-toggle="tooltip"
+                  title="Delete User"
+                  className="fas fa-times"
+                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
+                />
+                <Link to={`contact/edit/${id}`}>
+                  <i
+                    className="fas fa-pencil-alt"
+                    data-toggle="tooltip"
+                    title="Edit User"
+                    style={{
+                      cursor: 'pointer',
+                      float: 'right',
+                      color: 'black',
+                      marginRight: '1rem'
+                    }}
+                  />
+                </Link>
+              </div>
               <h4>
                 {name}
                 {showContactInfo ? (
@@ -59,26 +81,6 @@ class Contact extends Component {
                     style={{ cursor: 'pointer', paddingLeft: '5px' }}
                   />
                 )}
-                <i
-                  data-toggle="tooltip"
-                  title="Delete User"
-                  className="fas fa-times"
-                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
-                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
-                />
-                <Link to={`contact/edit/${id}`}>
-                  <i
-                    className="fas fa-pencil-alt"
-                    data-toggle="tooltip"
-                    title="Edit User"
-                    style={{
-                      cursor: 'pointer',
-                      float: 'right',
-                      color: 'black',
-                      marginRight: '1rem'
-                    }}
-                  />
-                </Link>
               </h4>
               {showContactInfo ? (
                 <ul className="list-group">

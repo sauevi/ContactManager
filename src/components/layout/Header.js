@@ -11,22 +11,11 @@ const Header = props => {
   const { branding } = props;
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-0">
-      <div className="container-fluid">
+      <div className="container">
         <Link to="/" className="navbar-brand">
           {branding}
         </Link>
-        <button
-          type="button"
-          className="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#myNavbar"
-          aria-controls="myNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="myNavbar">
+        <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link">
@@ -35,7 +24,7 @@ const Header = props => {
             </li>
             <li className="nav-item">
               <Link to="/contact/add" className="nav-link">
-                <i className="fas fa-plus" /> Add Contact
+                <i className="fas fa-plus" /> Add
               </Link>
             </li>
             <li className="nav-item">

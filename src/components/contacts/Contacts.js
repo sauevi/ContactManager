@@ -15,7 +15,7 @@ export class Contacts extends Component {
         {value => {
           const { contacts } = value;
           return (
-            <React.Fragment>
+            <div className="container-fluid">
               <h1 className="display-4 mb-2">
                 <span className="text-danger">Contact</span> List
               </h1>
@@ -23,7 +23,7 @@ export class Contacts extends Component {
               contacts.map(contact => (
                 <Contact key={contact.id} contact={contact} />
               ))}
-            </React.Fragment>
+            </div>
           );
         }}
       </Consumer>
