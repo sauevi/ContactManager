@@ -26,7 +26,7 @@ class App extends Component {
         <Router>
           <div className="App">
             {/* se envia una propiedad a una funcionalidad, con la propiedad personalizada */}
-            <Header branding="Contact Manager" />
+            <Header />
             {/* contenedor para los usuarios */}
             <div className="container">
               <Switch>
